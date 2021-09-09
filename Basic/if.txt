@@ -1,0 +1,22 @@
+IF statement 
+
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		int age = 80  ; 
+			if( age >=18 && age <=70) {
+				System.out.println("you are an adult"); 
+			}
+			else if (age > 70){
+				System.out.println("you are old");
+			}
+			
+			else {
+				System.out.println("Child");
+			}
+	}
+}
+
+ // giong lap trinh c++ va c 

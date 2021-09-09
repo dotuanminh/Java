@@ -1,0 +1,25 @@
+
+public class Friends {
+	String name ; 
+	static int numberOfFriends ;
+	Friends (String name){
+		this.name = name ;
+		numberOfFriends ++ ; 
+	}
+	
+}
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Friends fr1 = new Friends("SpongBob")  ;
+		Friends fr2 = new Friends("Huyngu")  ;
+		Friends.displayFriends();
+//		System.out.println(Friends.numberOfFriends);
+	}	
+}
+
+
+ 
+ 

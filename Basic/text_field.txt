@@ -1,0 +1,60 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+
+
+public class MyFrame extends JFrame implements ActionListener {
+	JButton button ; 
+	JTextField textfield ;
+	
+	
+	MyFrame(){
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new GridLayout());
+		
+		button = new JButton("Submit") ;
+		button.addActionListener(this) ; 
+		
+		
+		textfield = new JTextField() ; 
+		textfield.setPreferredSize(new Dimension(250,40));
+		textfield.setFont(new Font("Consoles",Font.PLAIN,35));
+		textfield.setForeground(new Color(0x00FF00)) ;
+		textfield.setBackground(Color.black) ; 
+		textfield.setText("User name");
+		textfield.setCaretColor(Color.white);
+		
+		
+		this.add(button) ;
+		this.add(textfield) ; 
+		this.pack() ; 
+		this.setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if ( e.getSource()== button) {
+			System.out.println("Welcome "+ textfield.getText()); 
+		
+		}
+		
+	}
+}
+
+
+	
+	public class Main {
+	
+		public static void main(String[] args) {
+			MyFrame frame = new MyFrame() ;	
+		}
+	
+	}
+

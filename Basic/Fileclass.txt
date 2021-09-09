@@ -1,0 +1,20 @@
+import java.io.File;
+import java.util.Scanner;
+	
+public class Main {
+	
+	public static void main (String[] args) {
+		File file = new File ("C:\\Users\\Minh Do\\Documents\\567iachay.txt") ; 
+		if(file.exists()) {
+			System.out.println("Exists");
+			System.out.println(file.getPath());
+			System.out.println(file.getAbsolutePath());
+			file.delete()  ; 
+		}else {
+			System.out.println("Not found");
+		}
+	}	
+}
+	
+	
+	 

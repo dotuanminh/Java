@@ -1,0 +1,71 @@
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+
+
+public class MyFrame extends JFrame implements KeyListener {	
+	
+	JLabel label ;
+	ImageIcon icon ; 
+	MyFrame(){
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(null);
+		this.addKeyListener(this);
+		
+		icon = new ImageIcon("flappy-bird_200x200_102.jpg") ;
+		label = new JLabel() ; 
+		label.setBounds(0,0,100,100);
+		label.setBackground(Color.red);
+		label.setOpaque(true);
+		//label.setIcon(icon);
+		
+		this.getContentPane().setBackground(Color.black); 
+		
+		this.add(label); 
+		this.setSize(420,420);
+		this.setVisible(true);
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		switch(e.getKeyChar()) {
+		case'a' : label.setLocation(label.getX()-10 ,label.getY());
+		break ;
+		case'w' : label.setLocation(label.getX() ,label.getY()-10);
+		break ;
+		case'd' : label.setLocation(label.getX()+10 ,label.getY());
+		break ;
+		case's' : label.setLocation(label.getX() ,label.getY()+10);
+		break ;
+		
+		
+		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("You release a key character "+ e.getKeyChar());
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+ 	
+		
+		public class Main {
+		
+			public static void main(String[] args) {
+				new MyFrame() ; 
+	}
+}

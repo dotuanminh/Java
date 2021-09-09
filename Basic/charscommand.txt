@@ -1,0 +1,24 @@
+String methods 
+String name 
+name. cho ta rat nhieu ham de xu li ; 
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		String name = "Minh" ;
+		//boolean res = name.equals("Minh") ;
+		//char res =name.charAt(name)  ;
+		// int res =name.indexOf("o") ; 
+		//int res= name.length() ; 
+		//boolean res= name.isEmpty() ; 
+		//String res = name.toUpperCase() ; 
+		//String res = name.toLowerCase() ; 
+		//String res = name.trim() ; 
+		//String res = name.replace('i','a') ; 
+		System.out.println(res); 
+		
+	}
+}
+
+ 

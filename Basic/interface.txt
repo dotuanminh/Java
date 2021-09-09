@@ -1,0 +1,42 @@
+- kind of inheritence but tell the class what to do exactly
+public interface Prey {
+	void flee() {
+		
+	}
+} 
+
+
+public interface Predator {
+	void hunt() {
+		
+	}
+}
+
+
+
+public class Fish implements Prey,Predator{
+	public void flee() {
+		System.out.println("the fish is fleeing");
+	}
+	
+	public	void hunt() {
+		System.out.println("this fish is hunting smaller fish");
+	}
+
+}
+
+
+
+public class Main {
+
+	public static void main (String[] args) {
+	 Rabbit rabbit= new Rabbit() ; 
+	 rabbit.flee();
+	 Fish fish = new Fish() ;
+	 fish.flee();
+	 fish.hunt(); 
+	}	
+}
+
+
+ 

@@ -1,0 +1,36 @@
+import java.util.Scanner;
+	
+	public class Main {
+	
+		public static void main (String[] args) {
+			
+			Scanner scanner = new Scanner(System.in); 
+			
+			try
+			{
+				int choose ; 
+			System.out.println("Enter a whole number to divide: ");
+			
+			int x = scanner.nextInt() ;
+			
+			System.out.println("Enter a whole number to divide by: ");
+			
+			int y= scanner.nextInt() ; 
+			
+			int z = x/y  ; 
+			System.out.println(z);
+			}
+			catch(ArithmeticException e) {
+				System.out.println("you can not divide by 0 you idiot");
+			}
+			catch(Exception e) {
+				System.out.println("Sth went wrong"); 
+			} // dong lenh ung chung cho moi loi  hay truong hop dac biet 
+			finally {
+				scanner.close() ; 
+			}
+		}	
+	}
+	
+	
+	 

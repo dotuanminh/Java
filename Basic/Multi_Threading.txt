@@ -1,0 +1,53 @@
+
+public class MyThread extends Thread{
+	@Override
+	public void run() {
+		for(int i= 10; i> 0 ; --i ) {
+			System.out.println("Thread #1: " +i);
+			try{Thread.sleep(1000); 
+		}catch(Exception e) {
+		e.printStackTrace();	
+		}
+	}
+		System.out.println("Thread #1 is finished");
+}
+	
+}
+	
+
+public class MyRunnable implements Runnable {
+	@Override
+	public void run() {
+		for(int i= 0; i< 10 ; ++i ) {
+			System.out.println("Thread #1: " +i);
+			try{Thread.sleep(1000); 
+		}catch(Exception e) {
+		e.printStackTrace();	
+		}
+		
+	}
+		System.out.println("Thread #1 is finished");
+	}
+}
+	
+
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
+			MyThread thread1 =new MyThread() ;
+			MyRunnable runnable1 = new MyRunnable() ;
+			Thread thread2 = new Thread(runnable1); 
+			thread1.setDaemon(true);
+			thread2.setDaemon(true);
+			thread1.start(); 
+//			thread1.join(3000) ; // wait until thread 1 is done and then continue
+			
+			thread2.start();
+			
+	}
+
+}
+
+

@@ -1,0 +1,34 @@
+
+public class Human {
+	String name ; 
+	int age ; 
+	double  weight; 
+	Human(String name, int age, double weight )  {
+		this.name = name ; 
+		this.age = age ;
+		this.weight= weight ; 
+	}
+	void eat() {
+		System.out.println(this.name + " is eating");
+	}
+	void drink() {
+		System.out.println(this.name+"is drinking");
+	}
+}
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Human human = new Human("Minh", 19, 60) ;
+		System.out.println(human.name);
+		Human human2 = new Human("Huy",23, 100) ; 
+		System.out.println(human2.age);
+		human2.eat();
+		human.drink(); 
+		
+	}
+}
+
+
+ 

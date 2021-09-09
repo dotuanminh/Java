@@ -1,0 +1,69 @@
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+public class MyPanel extends JPanel {
+	Image image ; 
+	
+	MyPanel(){
+		image = new ImageIcon().getImage() ; 
+		this.setPreferredSize(new Dimension(500,500));
+		
+	}
+	
+	public void paint(Graphics g) {
+		Graphics2D g2d = (Graphics2D)g; 
+	
+		g2d.setStroke(new BasicStroke(5));
+		g2d.setPaint(Color.blue);
+	//	g2d.drawLine(0, 0, 500, 500);
+//		g2d.drawRect(0, 0, 100, 200);
+//		g2d.fillRect(0, 0, 100, 200);
+//		
+//		int[] xPoints = {150, 250,350} ;
+//		int[] yPoints = {300,150,300};
+//		
+//		g2d.drawPolygon(xPoints, yPoints, 3);
+//		
+		g2d.drawImage(image,0,0,null) ; 
+		
+	
+	}
+}
+
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame {
+	MyPanel panel= new MyPanel() ; 
+	 
+	MyFrame(){
+		this.setLocationRelativeTo(null);
+		this.add(panel);
+		this.pack() ;
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+		this.setVisible(true);
+		
+	}
+	
+}
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			new MyFrame(); 
+			
+	}
+
+}
+

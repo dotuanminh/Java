@@ -1,0 +1,2 @@
+Math class 
+Math. then add the functoin u want

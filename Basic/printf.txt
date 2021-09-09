@@ -1,0 +1,24 @@
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		//	 giong ham printf trong c  
+		//%[flags][precision][width][conversion-character]
+	 	
+	 boolean res = true ; 
+	 int a= 3; 
+	 double b = 5.03 ; 
+	 
+	 System.out.printf("%b",res);
+	 System.out.println();
+	 System.out.printf("%d",a);
+	 System.out.println();
+	 System.out.printf("%f",b);
+	 System.out.println();
+	}
+	
+}
+
+//
+

@@ -1,0 +1,21 @@
+//wrapper class = provides a way to use primitivee data types as reference data types 
+// 		reference data types contain useful methods 
+//		can be used with colection (ex. ArrayList) 
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Boolean a = true ; 
+		Character b ='@' ;
+		Integer c = 2 ; 
+		Double d = 2.03 ; 
+		String e = "Minh" ; 
+// dung cai nay la ra huong doi tuong sau do co them cac ham hay trong kieu du lieu 
+		
+		// String. hay Intger. hay Double. hay Boolean . v.v...  
+		
+		
+	}
+}
+

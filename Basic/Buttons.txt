@@ -1,0 +1,107 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame implements ActionListener{
+		JButton button ; 
+
+	MyFrame(){
+		button= new JButton()  ; 
+		button.setBounds(200,100,100,50);
+		button.addActionListener(this);
+		
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) ;
+		this.setLayout(null);
+		this.setSize(500,500);
+		this.setVisible(true) ;  
+		this.add(button);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==button) {
+			System.out.println("poo");
+		}
+	}
+}
+
+
+
+public class Main {
+	
+	public static void main (String[] args){
+		new MyFrame() ; 		
+	}	
+}
+	
+	
+	 
+
+
+Cach 2 :
+
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class MyFrame extends JFrame {
+		JButton button ; 
+		JLabel label ;
+
+	MyFrame(){
+		ImageIcon image=  new ImageIcon("flappy-bird-game-icon-google-search-tare-game-icon-flappy-flappy-bird-icon-250_249.png") ; 
+		ImageIcon image2 = new ImageIcon("fallpy.png") ;
+		
+		label = new	JLabel() ;
+		label.setIcon(image2);
+		label.setVisible(false);
+		label.setBounds(150,250,150,150);
+		
+		
+		
+		button= new JButton()  ; 
+		button.setBounds(100,100,250,100);
+		button.setText("Press to play!") ; 
+		button.setFocusable(false);
+		button.setIcon(image);
+		button.setHorizontalTextPosition(JButton.CENTER);
+		button.setVerticalTextPosition(JButton.BOTTOM);
+		button.addActionListener(e-> System.out.println("Minh"));
+		button.setIconTextGap(-15);
+		button.setForeground(Color.black);
+		//button.setEnabled(false)  ; 
+		
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) ;
+		this.setLayout(null);
+		this.setSize(500,500);
+		this.setVisible(true) ;  
+		this.add(button);
+		this.add(label);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==button) {
+			label.setVisible(true);
+		}
+	}
+	}
+
+
+
+public class Main {
+	
+	public static void main (String[] args){
+		new MyFrame() ; 		
+	}	
+}
+	
+	
+	 

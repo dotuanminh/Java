@@ -1,0 +1,5 @@
+For Java : 
+
++ System.out.print : printf ; 
++ System.out.println: in cách dòng
+

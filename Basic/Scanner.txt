@@ -1,0 +1,10 @@
+Scanner  scanner = new Scanner(System.in) ; 
+		System.out.print("What is your name");
+		String name = scanner.nextLine()  ; 
+		System.out.println("Hello"+ name) ; 
+		scanner.nextLine()  ; // trước khi làm next line tiếp phải dung cái này để end dòng cũ 
+		int age = scanner.nextInt() ; 
+		System.out.print(age); 
+
+	}
+

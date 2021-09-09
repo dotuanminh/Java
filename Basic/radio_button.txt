@@ -1,0 +1,77 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+
+
+public class MyFrame extends JFrame implements ActionListener {
+	
+	JRadioButton pizzaButton, hamburgerButton, hotdogButton ; 
+	ButtonGroup group ;
+	ImageIcon pizzaicon , hamburgericon , hotdogicon  ;
+	
+	
+	MyFrame(){
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		pizzaicon = new ImageIcon("pizza.png") ;
+		hamburgericon = new ImageIcon("hamburger.png") ;
+		hotdogicon = new ImageIcon("hot dog.png") ;
+		
+		
+		pizzaButton = new JRadioButton("pizza") ; 
+		hamburgerButton  = new JRadioButton("hamburger") ; 
+		hotdogButton = new JRadioButton("hot dog") ;  
+		pizzaButton.setIcon(pizzaicon);
+		hamburgerButton.setIcon(hamburgericon);
+		hotdogButton.setIcon(hotdogicon);
+		
+		pizzaButton.addActionListener(this); 
+		hamburgerButton.addActionListener(this); 
+		hotdogButton.addActionListener(this); 
+		
+		
+		group = new ButtonGroup() ; 
+		group.add(pizzaButton);
+		group.add(hamburgerButton);
+		group.add(hotdogButton);
+		
+		
+		this.add(hamburgerButton) ; 
+		this.add(hotdogButton) ; 
+		this.add(pizzaButton)  ;
+		this.pack() ; 
+		this.setVisible(true);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if ( e.getSource()== pizzaButton) {
+			System.out.println("You ordered a pizza"); 
+		
+		}
+		if ( e.getSource()== hamburgerButton) {
+			System.out.println("You ordered a hamburger"); 
+		
+		}
+		if ( e.getSource()== hotdogButton) {
+			System.out.println("You ordered a hotdog"); 
+		
+		}
+		
+	}
+}
+
+	
+	public class Main {
+	
+		public static void main(String[] args) {
+			new MyFrame()  ;
+		}
+	
+	}

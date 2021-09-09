@@ -1,0 +1,22 @@
+OOP- Object Oriented Programming
+
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Cars myCar1 = new Cars() ;
+		Cars myCar2 = new Cars() ;
+		System.out.println(myCar1.colour); 
+		System.out.println(myCar1.make); 
+		System.out.println(myCar1.price); 
+		
+		
+		
+		myCar.drive();
+		
+	}
+}
+//
+
+

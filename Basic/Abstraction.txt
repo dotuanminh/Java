@@ -1,0 +1,25 @@
+
+public abstract class Vehicle {
+	abstract void go() ;
+}
+
+public class Car extends Vehicle {
+	void go() {
+		System.out.println("This car is being drived"); 
+		
+	}
+}
+
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Car car = new Car (); 
+		car.go(); 
+		
+	}	
+}
+
+
+ 

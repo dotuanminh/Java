@@ -1,0 +1,45 @@
+
+public class Vehicle {
+	double speed ; 
+	void go() {
+		System.out.println("This vehicle is moving ");
+		
+	}
+	
+	void stop() {
+		System.out.println("This vehicle is not moving ");
+		
+	}
+	
+	
+}
+
+public class Bike extends Vehicle {
+	void go() {
+		System.out.println("This vehicle is moving slow ");
+		
+	}
+}
+
+
+public class Motor extends Vehicle{
+	void go() {
+		System.out.println("This vehicle is moving fast ");
+		
+	}
+}
+
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Bike bike = new Bike() ; 
+		bike.go(); 
+		Motor motor = new Motor(); 
+		motor.go(); 
+	}	
+}
+
+
+ 

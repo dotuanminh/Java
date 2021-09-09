@@ -1,0 +1,39 @@
+overloaded method = method + diifernet parameter 
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main (String[] args) {
+		int a = 1; 
+		int b = 2; 
+		int c= 3 ; 
+		int  d =55  ; 
+		add(a,b) ; 
+		add(a,b,c) ; 
+		add(a,b,c,d) ; 
+		
+		System.out.println(add(a,b));
+		System.out.println(add(a,b,c));
+		System.out.println(add(a,b,c,d));
+		
+		
+		
+	
+	}
+	
+	static int add(int a, int b ) {
+		return a+b ;
+	}
+	static int add(int a, int b, int c  ) {
+		return a+b+c ;
+	}
+	static int add(int a, int b, int c, int d  ) {
+		return a+b+c+d ;
+	}
+	
+	
+}
+
+//
+

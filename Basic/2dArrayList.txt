@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main (String[] args) {
+//can change the size 
+		ArrayList<ArrayList<String>>groceryList = new ArrayList() ; 
+		
+		ArrayList<String> bakeryList = new ArrayList<String>();
+		bakeryList.add("pasta" ); 
+		bakeryList.add("garlic bread " ); 
+		bakeryList.add("donuts" ); 
+		
+		ArrayList<String> produceList = new ArrayList<String>();
+		produceList.add("tomatoes " ); 
+		produceList.add("xuchono " ); 
+		produceList.add("peppers" );
+		
+		ArrayList<String> drinkList = new ArrayList<String>();
+		drinkList.add("coke" ); 
+		drinkList.add("pepsi " ); 
+		drinkList.add("coffee" ); 
+		
+		groceryList.add(bakeryList) ; 
+		groceryList.add(produceList) ; 
+		groceryList.add(drinkList) ; 
+		
+		System.out.println(groceryList.get(2).get(1));
+		// get thu nhat cho 
+		// get thu hai cho phan tu trong array
+	}
+}
+
+//
+

@@ -1,0 +1,15 @@
+
+
+public class Main {
+
+	public static void main (String[] args) {
+			final double pi= 3.1412159 ; 
+			// can update it , giong define trong c++ 
+			
+			System.out.println(pi) ;
+	}
+	
+}
+
+//
+

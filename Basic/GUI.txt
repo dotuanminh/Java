@@ -1,0 +1,18 @@
+GUI 
+import javax.swing.JOptionPane;  
+public class Main {
+
+	public static void main (String[] args) {
+		String name =JOptionPane.showInputDialog("enter your name" ) ; 
+		JOptionPane.showMessageDialog(null, "Hello" + name) ;
+		int age =Integer.parseInt(JOptionPane.showInputDialog("enter your old" )) ;
+		JOptionPane.showMessageDialog(null, "You are " + age +"years old");
+		double height =Double.parseDouble(JOptionPane.showInputDialog("enter your height" )) ;
+		JOptionPane.showMessageDialog(null, "You are " + height + "cm");
+		
+	}
+}
+
+JOptionPane. rồi chọn hàm tùy ý theo mong muosn 
+ngoài ra hàm này chỉ dùng ch string nên muốn in ra phải đổi kiểu dữ liệu in nhờ 
+Int.parseint() ; ( thay int bằng kiểu đữ liệu phù hợp)  

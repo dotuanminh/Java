@@ -1,0 +1,54 @@
+import java.io.File;
+import java.util.Scanner;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+
+public class Main {
+	
+	public static void main (String[] args) throws LineUnavailableException, UnsupportedAudioFileException, java.io.IOException {
+		
+		Scanner scanner = new Scanner (System.in)  ; 
+		File file = new File("/MyFirstProgram/Tieng-coi-xe-canh-sat-www_nhacchuongvui_com.mp3");
+		
+		AudioInputStream audio = AudioSystem.getAudioInputStream(file);
+		
+		Clip clip = AudioSystem.getClip() ; 
+		clip.open(audio);
+		
+		String response = "" ; 
+		
+		clip.start() ; 
+		
+		while(!response.endsWith("q")) {
+			System.out.println("p= play, s= stop), q= quit, r= reset");
+			System.out.println("Enter your choice : ");
+		}
+		switch(response) {
+		
+		case("p") : clip.start(); 
+		break ; 
+		case("s") : clip.stop(); 
+		break ; 
+		case("r") : clip.setMicrosecondPosition(0); 
+		break ; 
+		case("q") : clip.close(); 
+		break ; 
+
+		default : System.out.println("Wrong");
+
+		}
+		
+		
+		
+		
+		
+	}	
+}
+	
+	
+	 

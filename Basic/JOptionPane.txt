@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+public class Main {
+		
+		public static void main (String[] args){
+			
+//			JOptionPane.showMessageDialog(null, "This is some useless Info", "Title", JOptionPane.PLAIN_MESSAGE ); ; 
+//			JOptionPane.showMessageDialog(null, "This is some useless Info", "Title", JOptionPane.INFORMATION_MESSAGE);
+//			JOptionPane.showMessageDialog(null, "Really?", "Title", JOptionPane.QUESTION_MESSAGE ); 
+//			JOptionPane.showMessageDialog(null, "your computer has a virus", "Title", JOptionPane.WARNING_MESSAGE );
+//			JOptionPane.showMessageDialog(null, "Call tech support now", "Title", JOptionPane.ERROR_MESSAGE ); 
+			
+//			int answer = JOptionPane.showConfirmDialog(null, "Bro do you even code", "Title",JOptionPane.YES_NO_CANCEL_OPTION);
+//			String name = JOptionPane.showInputDialog("What is your name?") ; 
+//			System.out.println("Hello"+ name);
+			
+			ImageIcon icon = new ImageIcon("123.png");
+			String[] res = {"No, you are awsome" ,"thank you" , "blush"} ; 
+			JOptionPane.showOptionDialog(null, "You are awsome" ,"Secret message", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, icon,res,0);
+		}	
+	}
+		
+		
+		 

@@ -1,0 +1,82 @@
+// generic methods 
+	
+	public class Main {
+	
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+			Integer[] intArray= {1,2,3,4,5} ; 
+			Double[] doubleArray = {5.5, 4.4,3.3,2.2,1.1} ; 
+			Character[] characterArray= {'H','E','L','L','O'} ;
+			String[] stringArray = {"B","y","e"} ;
+			displayArray(intArray ) ; 
+			displayArray(doubleArray ) ; 
+			displayArray(characterArray ) ; 
+			displayArray(stringArray ) ; 
+			System.out.println(getFirst(intArray));
+			System.out.println(getFirst(doubleArray) );
+			System.out.println(getFirst(characterArray));
+			System.out.println(getFirst(stringArray));
+		}
+		public static <Thing >void displayArray(Thing[] array) {
+			for( Thing x : array) {
+				System.out.println(x+"");
+			}
+			System.out.println();
+		}
+		public static <Thing >Thing getFirst(Thing[] array) {
+			return array[0] ; 
+		}
+//		public static void displayArray(Double[] array) {
+//			for( Double x : array) {
+//				System.out.println(x+"");
+//			}
+//			System.out.println();
+//		}
+//		public static void displayArray(Character[] array) {
+//			for( Character x : array) {
+//				System.out.println(x+"");
+//			}
+//			System.out.println();
+//		}
+//		public static void displayArray(String[] array) {
+//			for( String x : array) {
+//				System.out.println(x+"");
+//			}
+//			System.out.println();
+//		}
+	
+	}
+
+
+// generics class
+
+
+
+
+public class MyGenericClass<Thing extends Number,Thing2> {
+	Thing x;
+	Thing2 y; 
+	MyGenericClass(Thing x, Thing2 y){
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Thing2 getValue() {
+		return y;
+	}
+}
+
+
+		
+		public class Main {
+		
+			public static void main(String[] args) {
+				// TODO Auto-generated method stub
+				MyGenericClass<Integer,Integer> myInt = new MyGenericClass<>(1,0) ;
+				MyGenericClass<Double,Double> mydouble = new MyGenericClass<>(3.14,2.55);
+//				ArrayList<String> myFriends = new ArrayList<>( ; )
+				System.out.println(myInt.getValue() ); 
+				System.out.println(mydouble.getValue() ); 
+		
+		}
+}

@@ -1,0 +1,57 @@
+Polymorphism
+
+
+public class Vehicle {
+	void go() {
+		
+	}
+}
+
+
+
+public class Car extends Vehicle {
+	public void go() {
+		System.out.println("The car is moving");
+		
+	}
+}
+
+
+
+public class Boat extends Vehicle {
+	public void go() {
+		System.out.println("The boat is moving");
+		
+	}
+}
+
+
+public class Bike extends Vehicle {
+	void go() {
+		System.out.println("This bike is moving slow ");
+		
+	}
+}
+	
+
+
+
+public class Main {
+
+	public static void main (String[] args) {
+		Car car = new Car() ; 
+		Boat boat = new Boat(); 
+		Bike bike = new Bike() ;
+		
+		Vehicle	[] racers = {car, bike, boat} ;
+		
+		for( Vehicle x :racers) {
+			x.go() ; 
+		}
+		
+				
+	}	
+}
+
+
+ 

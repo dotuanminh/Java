@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main (String[] args) {
+		String[] animals = {"cat", "dog" , "birds","rat" } ; 
+		ArrayList<String> name = new ArrayList() ; 
+		
+		name.add("Minh") ; 
+		name.add("Huy") ; 
+		name.add("Thang") ; 
+				
+		for(String i : animals) {
+			System.out.println(i);
+		}
+		for (String i: name) {
+			System.out.println(i);
+		}
+	}
+}
+
+//
+

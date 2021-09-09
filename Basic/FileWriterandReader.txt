@@ -1,0 +1,49 @@
+import java.io.FileWriter;
+	
+public class Main {
+	
+	public static void main (String[] args) {
+		try {
+			FileWriter writer = new FileWriter("poem.txt") ; 
+			writer.write("Fuck you bitch \n");
+			writer.append("Minh" );
+			writer.close(); 
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+	}	
+}
+	
+	
+
+import java.io.FileReader;
+import java.io.FileWriter;
+	
+public class Main {
+	
+	public static void main (String[] args) {
+		try {
+			FileReader reader  = new FileReader ("poem.txt") ;
+			int data = reader.read() ; 
+			while(data != -1) {
+				System.out.print((char)data);
+				data = reader.read() ; 
+			}
+			reader.close();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+	}	
+}
+
+
+- file reader and file writer là class nguy hiểm nên phải cho vào try
+- mở xong phải đóng lại 
+
+	
+	
+	 

@@ -1,0 +1,26 @@
+
+public class Cars {
+	String make = "lamborghini"; 
+	String model = "I8" ; 
+	int year = 2020 ; 
+	String colour = "Black " ; 
+	double price= 5000.00 ; 
+
+
+	public String toString() {
+		return make + "\n" + model +"\n" +colour + "\n" +year ;
+	}
+}
+
+
+public class Main {
+
+	public static void main (String[] args) {
+			Cars car = new Cars() ; 
+			
+			System.out.println(car.toString());
+   			//System.out.println(car);
+	
+	}
+}
+

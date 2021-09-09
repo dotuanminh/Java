@@ -1,0 +1,8 @@
+Variables : 
+1.Data Types:
++ giống như bình thường 
++ bool -> boolean ; byte ; short 
++ primitve duy nhất : string ( lưu địa ch, không giới hạn, chậm hơn)
++trong system.out.print muon them bien sau string phai co dau + 
++trong ham long phai them L o cuoi, trong float phai them f o cuoi 
+
